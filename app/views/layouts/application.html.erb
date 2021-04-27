@@ -6,7 +6,8 @@
 
   <body>
     <% if user_signed_in?%>
-    <%= link_to 'Lougout', destroy_user_session_path, method: :delete %>
+    <%= link_to 'Contents', contents_path %>
+    <%= link_to 'Lougout', destroy_user_session_path, method: :DELETE %>
     <%end%>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
