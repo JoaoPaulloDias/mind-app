@@ -6,6 +6,7 @@
 
   <body>
     <% if user_signed_in?%>
+    <%= link_to 'Home', home_index_path %>
     <%= link_to 'Contents', contents_path %>
     <%= link_to 'Lougout', destroy_user_session_path, method: :DELETE %>
     <%end%>
