@@ -2,8 +2,12 @@ class ContentsController < ApplicationController
     before_action :authenticate_user!
     before_action :set_content, only: [:show, :edit, :update, :destroy]
     
-    def show; end
     def edit; end
+    def show
+    
+        @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
+    
+    end
   
     def index
         @contents = current_user.contents

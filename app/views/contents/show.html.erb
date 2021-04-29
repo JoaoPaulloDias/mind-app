@@ -1,5 +1,3 @@
 <h1><%= @content.title %></h1>
 
-<h3>
-    <%= @content.description %>
-</h3>
+ <%= raw @markdown.render(@content.description) %>
